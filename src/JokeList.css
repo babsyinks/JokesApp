@@ -1,0 +1,29 @@
+.wrapper{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,blue,blueviolet);
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.emojis{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.emojis i{
+    height: 150px;
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.jokes{
+    background-color: white;
+    width: 70%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
