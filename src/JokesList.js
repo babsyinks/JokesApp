@@ -39,6 +39,9 @@ async componentDidMount(){
     this.audioLaugh = new Audio('audios/laugh.mp3')
     this.audioNeutral = new Audio('audios/neutral.mp3')
     this.audioAngry = new Audio('audios/angry.mp3')
+    this.audioYawn = new Audio('audios/yawn.mp3')
+    this.audioLaughHard = new Audio('audios/laughhard.mp3')
+    this.audioFurious = new Audio('audios/furious.mp3')
 }
 
 async fetchJokes(){
@@ -144,6 +147,17 @@ handleAnger = ()=>{
     this.playAudio(this.audioAngry)
 }
 
+handleYawn = ()=>{
+    this.playAudio(this.audioYawn)
+}
+
+handleLaughHard = ()=>{
+    this.playAudio(this.audioLaughHard)
+}
+
+handleFurious = ()=>{
+    this.playAudio(this.audioFurious)
+}
 
 vote(val,id){
   const updatedState = this.state.jokesArray.map(joke=>{
@@ -181,11 +195,13 @@ render(){
             </div>
             
 
-            <div className = "jokes" style = {{height:this.state.jokesArray.length>10?'100%':'85vh'}}>
+            <div className = "jokes" style = {{height:this.state.jokesArray.length>10?'100%':'84.5vh'}}>
                {this.state.jokesArray.map(myjoke=><Joke key = {myjoke.id} joke = {myjoke.joke}
                 id = {myjoke.id} rating = {myjoke.rating} favouriteStatus = {myjoke.favouriteSet}
                 handleVote = {this.vote} setFavourites = {this.setFavouriteJokes}
-                handleAudios = {{handleAnger:this.handleAnger,handleLaughter:this.handleLaughter,handleNeutral:this.handleNeutral}}
+                handleAudios = {{handleAnger:this.handleAnger,handleLaughter:this.handleLaughter,
+                                handleNeutral:this.handleNeutral, handleFurious:this.handleFurious,
+                                handleLaughHard:this.handleLaughHard,handleYawn:this.handleYawn}}
                 />)}
             </div>
                 <div className = "buttonWrapper"><button onClick = {this.getFavouriteJokes} className = "getFavouritesJokes" value = "Get Saved Favourite Jokes">Get Saved Favourite Jokes 

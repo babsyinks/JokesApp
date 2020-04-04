@@ -15,7 +15,7 @@ class Joke extends React.Component{
     }
     mapRatingToEmojiOrColor(rating,handlemyAudios,emoji){
         console.log(handlemyAudios)
-        const{handleAnger,handleLaughter,handleNeutral} = handlemyAudios
+        const{handleAnger,handleLaughter,handleNeutral,handleFurious,handleYawn,handleLaughHard} = handlemyAudios
         if(rating>12){
             rating = 12
         }
@@ -28,7 +28,7 @@ class Joke extends React.Component{
         case 1:
         case 2:
         case 3:
-            return emoji?<i onMouseOver = {handleNeutral} className="em em-smile" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND SMILING EYES"></i>:'2px solid rgb(157, 255, 0)' 
+            return emoji?<i onMouseOver = {handleLaughter} className="em em-smile" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND SMILING EYES"></i>:'2px solid rgb(157, 255, 0)' 
         case 4:
         case 5:
         case 6:
@@ -36,15 +36,15 @@ class Joke extends React.Component{
         case 7:
         case 8:
         case 9:
-            return emoji?<i onMouseOver = {handleLaughter} className="em em-joy" aria-role="presentation" aria-label="FACE WITH TEARS OF JOY"></i>:'2px solid rgb(7, 168, 7)'
+            return emoji?<i onMouseOver = {handleLaughHard} className="em em-joy" aria-role="presentation" aria-label="FACE WITH TEARS OF JOY"></i>:'2px solid rgb(7, 168, 7)'
         case 10:
         case 11:
         case 12:
-            return emoji?<i onMouseOver = {handleLaughter} className="em em-rolling_on_the_floor_laughing" aria-role="presentation" aria-label="ROLLING ON THE FLOOR LAUGHING"></i>:'2px solid green'
+            return emoji?<i onMouseOver = {handleLaughHard} className="em em-rolling_on_the_floor_laughing" aria-role="presentation" aria-label="ROLLING ON THE FLOOR LAUGHING"></i>:'2px solid green'
         case -1:
         case -2:
         case -3:
-            return emoji?<i onMouseOver = {handleNeutral} className="em em-dizzy_face" aria-role="presentation" aria-label="DIZZY FACE"></i>:'2px solid rgb(255, 174, 0)'
+            return emoji?<i onMouseOver = {handleYawn} className="em em-dizzy_face" aria-role="presentation" aria-label="DIZZY FACE"></i>:'2px solid rgb(255, 174, 0)'
         case -4:
         case -5:
         case -6:
@@ -56,7 +56,7 @@ class Joke extends React.Component{
         case -10:
         case -11:
         case -12:
-            return emoji?<i onMouseOver = {handleAnger} className="em em-angry" aria-role="presentation" aria-label="ANGRY FACE"></i>:'2px solid red'
+            return emoji?<i onMouseOver = {handleFurious} className="em em-angry" aria-role="presentation" aria-label="ANGRY FACE"></i>:'2px solid red'
         default:
             return emoji?<i onMouseOver = {handleNeutral} className="em em-neutral_face" aria-role="presentation" aria-label="NEUTRAL FACE"></i>:'2px solid rgb(255, 255, 0)'
     
