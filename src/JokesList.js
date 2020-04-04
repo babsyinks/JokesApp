@@ -195,7 +195,7 @@ render(){
             </div>
             
 
-            <div className = "jokes" style = {{height:this.state.jokesArray.length>10?'100%':'84.5vh'}}>
+            <div className = "jokes" style = {{height:this.state.jokesArray.length<10?'100%':'84.5vh'}}>
                {this.state.jokesArray.map(myjoke=><Joke key = {myjoke.id} joke = {myjoke.joke}
                 id = {myjoke.id} rating = {myjoke.rating} favouriteStatus = {myjoke.favouriteSet}
                 handleVote = {this.vote} setFavourites = {this.setFavouriteJokes}
