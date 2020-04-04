@@ -1,0 +1,45 @@
+.animate{
+    display: block;
+    text-align: center;
+    margin:0px auto;
+    border-radius: 50%;
+    width:620px;
+    height:620px;
+    border:4px solid rgb(132, 0, 255);
+    animation-name: Animate-spin;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    color: blueviolet;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: white;
+
+    
+}
+
+.animate h1{
+  text-align: center;
+  width:30%;
+  margin:90px auto 0px;
+}
+.animate i{
+    padding:5px;
+    margin:8px;
+
+}
+
+.emojiWrapper{
+    display: flex;
+background-color: rgb(127, 157, 214);
+}
+
+@keyframes Animate-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
