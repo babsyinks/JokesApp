@@ -73,6 +73,7 @@ text-transform: uppercase;
 .status h1{
     font-family: PlayFair;
     font-weight: 669;
+    font-size: 40px;
     margin:0px;
     color:red;
 }
