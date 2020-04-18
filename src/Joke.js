@@ -10,11 +10,9 @@ class Joke extends React.Component{
     }
 
 
-  /*   componentDidMount(){
-       //console.log(this.props.handleAudios)
-    } */
+ 
     mapRatingToEmojiOrColor(rating,handlemyAudios,emoji){
-        //console.log(handlemyAudios)
+      
         const{handleAnger,handleLaughter,handleNeutral,handleFurious,handleYawn,handleLaughHard} = handlemyAudios
         if(rating>12){
             rating = 12
@@ -63,7 +61,7 @@ class Joke extends React.Component{
     }
     }
     render(){
-        //console.log(this.props.handleAudios)
+        
         return (
         <div className = "jokeWrapper">
             <i className="em em---1" aria-role="presentation" aria-label="THUMBS UP SIGN"

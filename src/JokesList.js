@@ -26,7 +26,7 @@ async componentDidMount(){
     
     try{
     const arr = await this.fetchJokes()
-        //console.log(arr)
+        
     this.setState({
         jokesArray:arr,
         canFetch:true,
@@ -72,11 +72,8 @@ async fetchJokes(){
           arr.push(jokeObj)
        
      }
-
-
         }
     
-     
    }
 
    return arr
