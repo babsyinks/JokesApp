@@ -51,7 +51,7 @@ async fetchJokes(){
     while(arr.length < this.props.numJokes){
 
       let res = await axios.get('https://icanhazdadjoke.com/',{headers:{Accept:'application/json'}})  
-   
+       console.log(res)
       let stateDuplicateTest = this.state.jokesArray.every(obj=>obj.joke !== res.data.joke)
 
       let jokeObj = {joke:res.data.joke,id:uuid(),rating:0,favouriteSet:false}
@@ -119,7 +119,7 @@ async getMoreJokes(){
        }))
         
     } catch (error) {
-        
+        this.setState({loading:false,canFetch:false})
     }
 }
 
