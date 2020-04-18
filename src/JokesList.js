@@ -26,7 +26,7 @@ async componentDidMount(){
     
     try{
     const arr = await this.fetchJokes()
-        console.log(arr)
+        //console.log(arr)
     this.setState({
         jokesArray:arr,
         canFetch:true,
@@ -76,11 +76,7 @@ async fetchJokes(){
 
         }
     
-     /*if(!arr.includes(res.data.joke) && !this.state.jokesArray.includes(res.data.joke)){
-         
-       
-     }
-     */
+     
    }
 
    return arr
