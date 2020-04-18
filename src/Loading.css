@@ -15,9 +15,9 @@
     font-size: 1.5rem;
     font-weight: bold;
     background-color: white;
-
     
 }
+
 
 .animate h1{
   text-align: center;
@@ -33,6 +33,7 @@
 .emojiWrapper{
     display: flex;
 background-color: rgb(127, 157, 214);
+min-height: 100vh;
 }
 
 @keyframes Animate-spin {
@@ -43,3 +44,43 @@ background-color: rgb(127, 157, 214);
       transform: rotate(360deg);
     }
   }
+
+  @media (max-width: 649px) { 
+    
+    .animate{
+      display: block;
+      text-align: center;
+      margin:0px auto;
+      border-radius: 50%;
+      width:750px;
+      height:480px;
+      border:4px solid rgb(132, 0, 255);
+      animation-name: Animate-spin;
+      animation-timing-function: ease-in-out;
+      animation-duration: 1.5s;
+      animation-delay: 1s;
+      animation-iteration-count: infinite;
+      color: blueviolet;
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: white;
+      
+  }
+
+  .emojiWrapper{
+  
+justify-content: center;
+align-items: center;
+}
+
+  .emojis i{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 20px;
+}
+  
+  .loading{
+    padding-top: 30px;
+  }
+  }
+  

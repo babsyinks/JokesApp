@@ -60,3 +60,11 @@ i{
     transform: scale(1.5,1.5);
     
 }
+
+@media (max-width: 649px) { 
+   .smile{
+       padding-right: 30px;
+   } 
+   
+  }
+  

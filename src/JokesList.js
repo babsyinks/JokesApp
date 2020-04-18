@@ -88,6 +88,10 @@ async fetchJokes(){
 
 getFavouriteJokes(){
     const jokes = JSON.parse(window.localStorage.getItem('jokes'))
+    if(jokes.length === 0){
+        alert(`No Favourites Jokes set yet;use the star on your favourite joke to set it`)
+    return
+    }
     this.setState({jokesArray:jokes})
         
 }
@@ -208,7 +212,7 @@ render(){
                 <i className="em em-star2" aria-role="presentation" aria-label="GLOWING STAR"></i></button>
                 <button onClick = {this.getMoreJokes} className = "getFavouritesJokes moreJokes" value = "Get Even More New Jokes">Get Even More New Jokes <i className="em em-rolling_on_the_floor_laughing" aria-role="presentation" aria-label="ROLLING ON THE FLOOR LAUGHING"></i></button>
                 </div>
-        </div>):<div className = "status"><h1>Could not fetch jokes, please check your connection</h1></div>
+        </div>):<div className = "status"><h1 style = {{padding:'0px 15px'},{textAlign:'center'}}>Could not fetch jokes, please check your connection</h1></div>
             
     )
     )

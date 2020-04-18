@@ -10,7 +10,7 @@ const Loading = ()=>(
 <i className="em em-neutral_face neutral" aria-role="presentation" aria-label="NEUTRAL FACE"></i>
 
 <i className="em em-angry angry" aria-role="presentation" aria-label="ANGRY FACE"></i>
-<h1>Loading...</h1>
+<h1 className = "loading">Loading...</h1>
 </div>
     </div>
 )

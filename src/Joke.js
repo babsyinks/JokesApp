@@ -24,41 +24,41 @@ class Joke extends React.Component{
         }
     switch(rating){
         case 0:
-            return emoji?<i onMouseOver = {handleNeutral} className="em em-neutral_face" aria-role="presentation" aria-label="NEUTRAL FACE"></i>:'2px solid rgb(216, 216, 16)'
+            return emoji?<i onMouseOver = {handleNeutral} onClick = {handleNeutral} className="em em-neutral_face smile" aria-role="presentation" aria-label="NEUTRAL FACE"></i>:'2px solid rgb(216, 216, 16)'
         case 1:
         case 2:
         case 3:
-            return emoji?<i onMouseOver = {handleLaughter} className="em em-smile" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND SMILING EYES"></i>:'2px solid rgb(157, 255, 0)' 
+            return emoji?<i onMouseOver = {handleLaughter} onClick = {handleLaughter} className="em em-smile smile" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND SMILING EYES"></i>:'2px solid rgb(157, 255, 0)' 
         case 4:
         case 5:
         case 6:
-            return emoji?<i onMouseOver = {handleLaughter} className="em em-laughing" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES"></i>:'2px solid rgb(0, 255, 0)'
+            return emoji?<i onMouseOver = {handleLaughter} onClick = {handleLaughter} className="em em-laughing smile" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES"></i>:'2px solid rgb(0, 255, 0)'
         case 7:
         case 8:
         case 9:
-            return emoji?<i onMouseOver = {handleLaughHard} className="em em-joy" aria-role="presentation" aria-label="FACE WITH TEARS OF JOY"></i>:'2px solid rgb(7, 168, 7)'
+            return emoji?<i onMouseOver = {handleLaughHard} onClick = {handleLaughHard} className="em em-joy smile" aria-role="presentation" aria-label="FACE WITH TEARS OF JOY"></i>:'2px solid rgb(7, 168, 7)'
         case 10:
         case 11:
         case 12:
-            return emoji?<i onMouseOver = {handleLaughHard} className="em em-rolling_on_the_floor_laughing" aria-role="presentation" aria-label="ROLLING ON THE FLOOR LAUGHING"></i>:'2px solid green'
+            return emoji?<i onMouseOver = {handleLaughHard} onClick = {handleLaughHard} className="em em-rolling_on_the_floor_laughing smile" aria-role="presentation" aria-label="ROLLING ON THE FLOOR LAUGHING"></i>:'2px solid green'
         case -1:
         case -2:
         case -3:
-            return emoji?<i onMouseOver = {handleYawn} className="em em-dizzy_face" aria-role="presentation" aria-label="DIZZY FACE"></i>:'2px solid rgb(255, 174, 0)'
+            return emoji?<i onMouseOver = {handleYawn} onClick = {handleYawn} className="em em-dizzy_face smile" aria-role="presentation" aria-label="DIZZY FACE"></i>:'2px solid rgb(255, 174, 0)'
         case -4:
         case -5:
         case -6:
-            return emoji?<i onMouseOver = {handleAnger} className="em em-unamused" aria-role="presentation" aria-label="UNAMUSED FACE"></i>:'2px solid rgb(255, 123, 0)'
+            return emoji?<i onMouseOver = {handleAnger} onClick = {handleAnger} className="em em-unamused smile" aria-role="presentation" aria-label="UNAMUSED FACE"></i>:'2px solid rgb(255, 123, 0)'
         case -7:
         case -8:
         case -9:
-            return emoji?<i onMouseOver = {handleAnger} className="em em-slightly_frowning_face" aria-role="presentation" aria-label="SLIGHTLY FROWNING FACE"></i>:'2px solid rgb(223, 37, 12)'
+            return emoji?<i onMouseOver = {handleAnger} onClick = {handleAnger} className="em em-slightly_frowning_face smile" aria-role="presentation" aria-label="SLIGHTLY FROWNING FACE"></i>:'2px solid rgb(223, 37, 12)'
         case -10:
         case -11:
         case -12:
-            return emoji?<i onMouseOver = {handleFurious} className="em em-angry" aria-role="presentation" aria-label="ANGRY FACE"></i>:'2px solid red'
+            return emoji?<i onMouseOver = {handleFurious} onClick = {handleFurious} className="em em-angry smile" aria-role="presentation" aria-label="ANGRY FACE"></i>:'2px solid red'
         default:
-            return emoji?<i onMouseOver = {handleNeutral} className="em em-neutral_face" aria-role="presentation" aria-label="NEUTRAL FACE"></i>:'2px solid rgb(255, 255, 0)'
+            return emoji?<i onMouseOver = {handleNeutral} onClick = {handleNeutral} className="em em-neutral_face smile" aria-role="presentation" aria-label="NEUTRAL FACE"></i>:'2px solid rgb(255, 255, 0)'
     
     }
     }
