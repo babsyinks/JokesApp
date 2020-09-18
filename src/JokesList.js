@@ -2,7 +2,7 @@ import React from 'react'
 import Joke from './Joke'
 import Loading from './Loading'
 import axios from 'axios'
-import uuid from 'uuid/v4'
+import { v4 as uuid } from 'uuid';
 import './JokeList.css'
 
 class JokeList extends React.Component{
@@ -124,13 +124,11 @@ async getMoreJokes(){
 }
 
 playAudio(audio){
-    audio.play().then(()=>
-    //successful play after user interaction    
-    console.log('')
-        
+    audio.play().then(()=>{
+       //successfull playback 
+    }
     )
     .catch(e=>console.log(e.message))
-    
 }
 
 handleLaughter = ()=>{
