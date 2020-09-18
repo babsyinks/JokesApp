@@ -125,7 +125,8 @@ async getMoreJokes(){
 
 playAudio(audio){
     audio.play().then(()=>
-        console.log('success')
+    //successful play after user interaction    
+    console.log('')
         
     )
     .catch(e=>console.log(e.message))
